@@ -1,0 +1,187 @@
+/* From Uiverse.io by codebykay101 */ 
+.container {
+    margin-top: 3   rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .container .glass {
+    position: relative;
+    width: 180px;
+    height: 200px;
+    background: linear-gradient(#fff2, transparent);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 25px rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    border-radius: 10px;
+    margin: 0 -45px;
+    backdrop-filter: blur(10px);
+    transform: rotate(calc(var(--r) * 1deg));
+  }
+  
+  .container:hover .glass {
+    transform: rotate(0deg);
+    margin: 0 10px;
+  }
+  
+  .container .glass::before {
+    content: attr(data-text);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.05);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+  }
+  .container .glass svg {
+    font-size: 2.5em;
+    fill: #fff;
+  }
+
+  :root {
+    --text-gradient: linear-gradient(45deg, #6A9BD1, #A0B3C1, #4A6E8C);
+}
+
+.color__gradiente {
+    background: var(--text-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* .card {
+    margin-top: 1rem;
+    width: 12rem;
+    height: 14rem;
+    background: rgba(49, 49, 49, 0.05); Fondo casi invisible
+    border-radius: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.5); Borde inicial
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    transition: 0.2s ease-in-out;
+    position: relative; Asegúrate de que la posición sea relativa
+    overflow: hidden; Agregado para ocultar contenido que se desborde
+    animation: borderColorChange 5s infinite alternate; Animación del borde
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: inherit; Hereda el fondo de la carta
+    filter: blur(10px); Efecto de desenfoque
+    z-index: 0; Asegúrate de que esté detrás del contenido
+}
+
+.textBox {
+    position: relative; Asegúrate de que el texto esté por encima del fondo borroso
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    transition: 0.2s ease-in-out;
+    z-index: 2;
+}
+
+@keyframes borderColorChange {
+    0% {
+        border-color: rgba(255, 255, 255, 0.5); Color inicial
+    }
+    50% {
+        border-color: rgba(255, 0, 0, 0.5); Color intermedio (rojo)
+    }
+    100% {
+        border-color: rgba(0, 0, 255, 0.5); Color final (azul)
+    }
+}
+.img {
+    margin-block-end: 2.5rem;
+    height: 60%; Ajusta este valor si es necesario
+    position: absolute;
+    transition: 0.2s ease-in-out;
+    z-index: 1;
+    bottom: 0; Asegúrate de que el SVG esté alineado al fondo de la carta
+}
+
+/* 
+.img {
+     margin-top: -15rem; 
+    margin-block-end: 2.5rem;
+    height: 60%;  Ajusta este valor si es necesario 
+    position: absolute;
+    transition: 0.2s ease-in-out;
+    z-index: 1;
+    bottom: 0; Asegúrate de que el SVG esté alineado al fondo de la carta 
+}
+
+.textBox {
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    transition: 0.2s ease-in-out;
+    z-index: 2;
+}
+
+.textBox > .text {
+    font-weight: bold;
+}
+
+.textBox > .head {
+    font-size: 20px;
+}
+
+.textBox > .price {
+    font-size: 17px;
+}
+
+.textBox > span {
+    font-size: 12px;
+    color: lightgrey;
+}
+
+.card:hover > .textBox {
+    opacity: 1;
+}
+
+.card:hover > .img {
+    height: 65%;
+    filter: blur(7px);
+    animation: anim 3s infinite;
+}
+
+@keyframes anim {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.card:hover {
+    transform: scale(1.04) rotate(-1deg);
+} */

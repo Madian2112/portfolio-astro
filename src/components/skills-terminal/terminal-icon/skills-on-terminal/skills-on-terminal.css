@@ -1,3 +1,12 @@
+:root {
+    --text-gradient: radial-gradient(
+        circle farthest-corner at center center,
+        #58f9ff 0%,
+        #df44e7 100%
+    );
+}
+
+
 .terminal__skills__container {
 	display: flex;
 	flex-wrap: wrap;
@@ -22,4 +31,11 @@
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
+}
+
+.color__gradiente {
+    background: var(--text-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }

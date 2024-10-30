@@ -2,34 +2,50 @@
 import TerminalIcon from '../terminal/TerminalIcon.astro';
 import Terminal from '../atoms/Terminal.astro';
 import './skills-on-terminal.css';
+import Card  from '../../../cards/card.astro'
 ---
+<h2
+class="mt-5 mb-2 text-2xl font-bold lg:mt-10 sm:mt-6 dark:text-neutral-200"
+style="margin-top: 0.5em; margin-block-end: 1em;"
+>
+Skills
+</h2>
 
 <Terminal nombre="Madian V.">
-	<div style="margin-top: -6em;" class="terminal__skills">
-		<h2>Mis habilidades</h2>
+	<div style="margin-top: -3em;" class="terminal__skills">
+		<h3 class="color__gradiente" style=`margin-bottom:` >Front-end</h3>
 		<div class="terminal__skills__container">
 			<TerminalIcon
-				src="src/assets/svg/bootstrap.svg"
+				src="/public/assets/images/svg/bootstrap.svg"
 				color="#7738ff"
 				name="Bootstrap"
 			/>
 			<TerminalIcon
-				src="src/assets/svg/angular.svg"
+				src="/public/assets/images/svg/angular.svg"
 				color="#FF4747"
 				name="Angular"
 			/>
 			<TerminalIcon
-				src="src/assets/svg/react.svg"
+				src="/public/assets/images/svg/react.svg"
 				color="#00D1FF"
 				name="React"
 			/>
-			<TerminalIcon src="src/assets/svg/bun.svg" color="#F3CBC2" name="Bun" />
-			<TerminalIcon src="src/assets/svg/css.svg" color="#00A3FF" name="CSS" />
+			<TerminalIcon src="/public/assets/images/svg/Astro.svg" color="#F3CBC2" name="Astro" />
+			<TerminalIcon src="/public/assets/images/svg/css.svg" color="#00A3FF" name="CSS" />
 			<TerminalIcon
-				src="src/assets/svg/electron.svg"
+				src="/public/assets/images/svg/typescript.svg"
 				color="#3F75FF"
-				name="Electron"
+				name="TypeScript"
 			/>
 		</div>
-	</div>
+	   </div>
 </Terminal>
+<style>
+	h3 {
+		margin-top: 0.3em;
+		margin-block-end: 0.3em;
+		font-size: 3.5rem;
+		font-weight: 500;
+	}
+</style>
+

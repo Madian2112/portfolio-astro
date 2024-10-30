@@ -1,0 +1,66 @@
+/* From Uiverse.io by vinodjangid07 */ 
+.Documents_btn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: fit-content;
+  height: 45px;
+  border: none;
+  padding: 0px 15px;
+  border-radius: 5px;
+  background-color: rgb(20, 20, 20); /* Color de fondo más oscuro */
+  gap: 10px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.folderContainer {
+  width: 40px;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+}
+.fileBack {
+  z-index: 1;
+  width: 80%;
+  height: auto;
+  background-color: rgb(30, 30, 30); /* Color de fondo gris oscuro para el archivo */
+}
+.filePage {
+  width: 50%;
+  height: auto;
+  position: absolute;
+  z-index: 2;
+  transition: all 0.3s ease-out;
+  background-color: rgb(50, 50, 50); /* Color de fondo gris oscuro para la página */
+}
+.fileFront {
+  width: 85%;
+  height: auto;
+  position: absolute;
+  z-index: 3;
+  opacity: 0.95;
+  transform-origin: bottom;
+  transition: all 0.3s ease-out;
+  background-color: rgb(70, 70, 70); /* Color de fondo gris más claro para el frente */
+}
+.text {
+  color: white; /* Mantener texto blanco para contraste en fondo oscuro */
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+.Documents_btn:hover .filePage {
+  transform: translateY(-5px);
+}
+.Documents_btn:hover {
+  background-color: rgb(30, 30, 30); /* Color de fondo oscuro al pasar el mouse */
+}
+.Documents_btn:active {
+  transform: scale(0.95);
+}
+.Documents_btn:hover .fileFront {
+  transform: rotateX(30deg);
+}

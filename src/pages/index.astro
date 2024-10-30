@@ -17,7 +17,7 @@ import Layout from "../layouts/main.astro";
     <div class="flex flex-col items-center md:flex-row">
       <div class="relative w-full md:w-1/2">
         <h1
-          class="mb-5 text-4xl font-bold leading-tight md:text-4xl lg:text-6xl dark:text-white"
+          class="shine mb-5 text-4xl font-bold leading-tight md:text-4xl lg:text-6xl dark:text-white"
         >
           Hello, I'm Madian V.
         </h1>
@@ -46,6 +46,72 @@ import Layout from "../layouts/main.astro";
       <div
         class="relative justify-end hidden w-full mt-10 md:flex md:pl-10 md:w-1/2 md:mt-0 md:translate-y-4 xl:translate-y-0"
       >
+
+      <div style="margin-top: -45%; margin-left: 20%; height: 120%; width: 120%;" class="group origin-bottom-right duration-500 -rotate-12 hover:-rotate-0 hover:-skew-x-12 skew-x-0 hover:-translate-x-6 hover:translate-y-12">
+        <div class="duration-500 group-hover:duration-400 relative rounded-2xl w-80 h-48 bg-zinc-800 bg-opacity-70 backdrop-blur-lg text-gray-50 flex flex-col justify-center items-center gap-1 before:-skew-x-12 before:rounded-2xl before:absolute before:content[''] before:bg-neutral-700 before:bg-opacity-70 before:right-3 before:top-0 before:w-80 before:h-44 before:-z-10 group-hover:before:-right-3 group-hover:before:skew-x-12 before:duration-500 group-hover:duration-500 shadow-neon glow-effect">
+          <span class="text-6xl font-bold">JR</span>
+          <p class="font-thin">- Developer -</p>
+        </div>
+      </div>
+      
+      <style>
+        :root {
+          --border-color: #ff00ff; /* Color de los bordes (morado) */
+          --text-color: #ff00ff; /* Color del texto (morado) */
+          --hover-color: #00ccff; /* Color de hover (azul celeste) */
+          --hover-color: #00ff80; /* Color de hover (azul celeste) */
+        }
+      
+        .shadow-neon {
+          box-shadow: 0 0 5px var(--border-color), 0 0 10px var(--border-color), 0 0 20px var(--border-color), 0 0 40px var(--border-color), 0 0 80px var(--border-color);
+        }
+      
+        .glow-effect {
+          animation: glow 1.5s infinite alternate;
+        }
+      
+        @keyframes glow {
+          0% {
+            box-shadow: 0 0 5px var(--border-color), 0 0 10px var(--border-color), 0 0 20px var(--border-color), 0 0 40px var(--border-color), 0 0 80px var(--border-color);
+          }
+          100% {
+            box-shadow: 0 0 10px var(--hover-color), 0 0 20px var(--hover-color), 0 0 30px var(--hover-color), 0 0 40px var(--hover-color), 0 0 60px var(--hover-color);
+          }
+        }
+      
+        /* Efecto de hover */
+        .group:hover .shadow-neon {
+          box-shadow: 0 0 10px var(--hover-color), 0 0 20px var(--hover-color), 0 0 30px var(--hover-color), 0 0 40px var(--hover-color), 0 0 80px var(--hover-color);
+        }
+     
+        /* Efecto de neón para el texto */
+        /* .text-neon {
+          color: var(--text-color);  Color del texto 
+          text-shadow: 
+            0 0 5px var(--border-color),  Borde de luz morada
+            0 0 10px var(--border-color), 
+            0 0 20px var(--hover-color),  Sombra de texto en azul celeste 
+            0 0 30px var(--hover-color);  Sombra más intensa 
+          animation: text-glow 1.5s infinite alternate;
+        } */
+
+        @keyframes text-glow {
+          0% {
+            text-shadow: 
+              0 0 5px var(--border-color), /* Borde de luz morada */
+              0 0 10px var(--border-color), 
+              0 0 20px var(--hover-color), 
+              0 0 30px var(--hover-color); /* Sombra más intensa */
+          }
+          100% {
+            text-shadow: 
+              0 0 10px var(--hover-color), /* Borde de luz azul celeste */
+              0 0 20px var(--hover-color), 
+              0 0 30px
+          }
+        }
+      </style>
+      
         <!-- <div class="relative z-50 w-full">
           <div
             class="absolute bottom-0 z-40 w-16 h-16 -translate-x-6 -translate-y-1/2 lg:top-auto top-0 lg:-translate-y-[330px] rounded-full"
