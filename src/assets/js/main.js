@@ -173,3 +173,17 @@ window.closeMobileMenu = () => {
 	document.getElementById("menu").classList.add("hidden");
 	document.getElementById("mobileMenuBackground").classList.add("hidden");
 };
+
+const observer = new IntersectionObserver((entries) => {
+	entries.forEach((entry) => {
+   if (entry.isIntersecting) {
+			  entry.target.classList.add("show");
+		  }
+  else{
+	  entry.target.classList.remove('show');
+  }
+	  });
+  });
+
+  const icons = document.querySelectorAll(".hidden");
+  icons.forEach((icon) => observer.observe(icon));

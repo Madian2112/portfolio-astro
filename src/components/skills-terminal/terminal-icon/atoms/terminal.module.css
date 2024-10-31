@@ -7,12 +7,14 @@
 	min-height: 250px;
 	border-radius: 11px;
 	overflow: hidden;
+	margin-top: 4rem;
 }
 
 .header {
 	height: 30px;
 	width: 100%;
-	background: var(--terminal-title-bar-background, #211b2b);
+    background: linear-gradient(rgba(255, 255, 255, 0.034), transparent);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 	display: flex;
 	align-items: center;
 	padding: 0 11px;
@@ -49,9 +51,10 @@
 }
 
 .body {
-	flex: 1;
-	padding: 10px;
-	background: var(--terminal-background, #080011);
+    flex: 1;
+    padding: 10px;
+	background: linear-gradient(#fff2, transparent);
+    border: 5px linear-gradient(rgba(255, 255, 255, 0.055), transparent);
 }
 
 .user__line {

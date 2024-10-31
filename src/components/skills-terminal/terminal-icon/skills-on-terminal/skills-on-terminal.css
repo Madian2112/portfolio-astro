@@ -39,3 +39,37 @@
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
+.base {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.base {
+	width: min-content;
+	color: var(--icon-color);
+}
+.icon {
+	font-size: 7rem;
+}
+
+/* .icon {
+    filter: brightness(0.7);  //Ajusta el valor según sea necesario 
+} */
+
+.name {
+	font-size: var(--text-general);
+}
+.icon {
+	display: inline-block;
+	width: 1em;
+	height: 1em;
+	-webkit-mask-image: var(--svg);
+	mask-image: var(--svg);
+	-webkit-mask-repeat: no-repeat;
+	mask-repeat: no-repeat;
+	-webkit-mask-size: 100% 100%;
+	mask-size: 100% 100%;
+}

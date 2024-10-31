@@ -72,7 +72,7 @@ import Logo from "../components/logo.astro";
           })
         }
       </div>
-      <div
+      <!-- <div
         id="darkToggle"
         class="relative flex items-center pl-6 ml-4 font-medium tracking-wide cursor-pointer text-neutral-800 group dark:text-white"
       >
@@ -110,7 +110,48 @@ import Logo from "../components/logo.astro";
           <span id="dayText" class="ml-2">Day mode</span>
           <span id="nightText" class="hidden ml-2">Night mode</span>
         </span>
-      </div>
+      </div> -->
     </nav>
   </div>
 </header>
+<style>
+  section{
+	  display: grid;
+	  place-items: center;
+	  align-items: center;
+}
+
+.hidden{
+	opacity: 0;
+	filter:  blur(5px);
+	transform: translateX(-100%);
+	transition: all 1s;
+}
+
+.show{
+	opacity: 1;
+	filter:  blur(0);
+	transform: translateX(0);
+}
+
+/* @media(prefers-reduced-motion){
+	.hidden{
+		transition: none;
+	}
+} */
+</style>
+<script>
+  const observer = new IntersectionObserver((entries) => {
+	entries.forEach((entry) => {
+   if (entry.isIntersecting) {
+			  entry.target.classList.add("show");
+		  }
+  else{
+	  entry.target.classList.remove('show');
+  }
+	  });
+  });
+
+  const icons = document.querySelectorAll(".hidden");
+  icons.forEach((icon) => observer.observe(icon));
+</script>

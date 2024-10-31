@@ -1,14 +1,63 @@
 ---
+// components/Terminal.astro
 import terminalIcon from './terminal-icon.module.css';
+
 interface Props {
 	name: string;
 	src: string;
 	color: string;
 }
+
 const { name, src, color } = Astro.props;
 ---
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terminal Icon</title>
+    <style>
+        .hidden {
+            opacity: 0;
+            filter: blur(5px);
+            transform: translateX(-100%);
+            transition: all 1s;
+        }
 
-<div class={terminalIcon.base} style=`--icon-color: ${color};`>
-	<div class={terminalIcon.icon} style=`--svg: url(${src})`></div>
-	<span class={terminalIcon.name}>{name}</span>
-</div>
+        .show {
+            opacity: 1;
+            filter: blur(0);
+            transform: translateX(0);
+        }
+
+        /* Puedes descomentar esta parte si deseas usarla */
+        /* @media(prefers-reduced-motion){
+            .hidden {
+                transition: none;
+            }
+        } */
+    </style>
+</head>
+<body>
+    <div class="hidden">
+        <div class={`${terminalIcon.base}`} style={`--icon-color: ${color};`}>
+            <div class={terminalIcon.icon} style={`--svg: url(${src})`}></div>
+            <span class={terminalIcon.name}>{name}</span>
+        </div>
+    </div>
+
+    <script defer>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("show");
+                } else {
+                    entry.target.classList.remove('show');
+                }
+            });
+        });
+
+        const icons = document.querySelectorAll(".hidden");
+        icons.forEach((icon) => observer.observe(icon));
+    </script>
+</body>
+</html>
