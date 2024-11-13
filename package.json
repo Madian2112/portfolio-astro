@@ -3,9 +3,9 @@
 	"type": "module",
 	"version": "0.0.1",
 	"scripts": {
-		"dev": "gh-pages -d dist",
-		"start": "astro dev",
 		"build": "astro build",
+		"deploy": "gh-pages -d dist",
+		"start": "astro dev",
 		"preview": "astro preview",
 		"astro": "astro",
 		"check": "biome check --apply-unsafe ."
