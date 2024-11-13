@@ -3,6 +3,7 @@ import projects from "../../collections/projects.json";
 import Button from "../button.astro";
 import Project from "../project.astro";
 ---
+<div class="">
 
 <section class="max-w-4xl mx-auto px-7 lg:px-0">
   <h2
@@ -23,7 +24,7 @@ import Project from "../project.astro";
           <Project
             name={project.name}
             description={project.description}
-            image={project.image}
+            /*image={project.image}*/
             url={project.url}
           />
         )
@@ -32,6 +33,7 @@ import Project from "../project.astro";
   </div>
 
   <div class="flex items-center justify-center w-full py-5">
-    <Button text="View All My Projects" link="/projects" />
+    <Button text="Learn more about my projects"/>
   </div>
 </section>
+</div>

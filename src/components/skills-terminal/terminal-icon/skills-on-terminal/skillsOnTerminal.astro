@@ -13,14 +13,14 @@ import Card  from '../../../cards/card.astro'
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Habilidades</title>
     <style>
-        .hidden {
+        .hiddennn {
             opacity: 0;
             filter: blur(5px);
             transform: translateX(-100%);
             transition: all 1s;
         }
 
-        .show {
+        .showww {
             opacity: 1;
             filter: blur(0);
             transform: translateX(0);
@@ -28,7 +28,7 @@ import Card  from '../../../cards/card.astro'
 
         /* Puedes descomentar esta parte si deseas usarla */
         /* @media(prefers-reduced-motion){
-            .hidden {
+            .hiddennn {
                 transition: none;
             }
         } */
@@ -51,7 +51,7 @@ import Card  from '../../../cards/card.astro'
 
 
 <Terminal nombre="Madian V.">
-	<div style="margin-top: -3em;" class="terminal__skills hidden">
+	<div style="margin-top: -3em;" class="terminal__skills hiddennn">
 		<h3 class="color__gradiente" style=`margin-bottom:` >Front-end</h3>
 		<div class="terminal__skills__container">
 			<div class="base">
@@ -104,7 +104,7 @@ import Card  from '../../../cards/card.astro'
 	   </div>
 </Terminal>
 <Terminal nombre="Madian V.">
-	<div style="margin-top: -3em;" class="terminal__skills hidden">
+	<div style="margin-top: -3em;" class="terminal__skills hiddennn">
 		<h3 class="color__gradiente" style=`margin-bottom:` >Back-end</h3>
 		<div class="terminal__skills__container">
 			<div class="base">
@@ -128,7 +128,7 @@ import Card  from '../../../cards/card.astro'
 
 
 <Terminal nombre="Madian V.">
-	<div style="margin-top: -3em;" class="terminal__skills hidden">
+	<div style="margin-top: -3em;" class="terminal__skills hiddennn">
 		<h3 class="color__gradiente" style=`margin-bottom:` >Data Layer</h3>
 		<div class="terminal__skills__container">
 			<div class="base">
@@ -153,14 +153,14 @@ import Card  from '../../../cards/card.astro'
 	const observer = new IntersectionObserver((entries) => {
 		entries.forEach((entry) => {
 			if (entry.isIntersecting) {
-				entry.target.classList.add("show");
+				entry.target.classList.add("showww");
 			} else {
-				entry.target.classList.remove('show');
+				entry.target.classList.remove('showww');
 			}
 		});
 	});
 
-	const icons = document.querySelectorAll(".hidden");
+	const icons = document.querySelectorAll(".hiddennn");
 	icons.forEach((icon) => observer.observe(icon));
 </script>
 </body>

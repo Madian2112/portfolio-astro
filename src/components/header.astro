@@ -4,6 +4,7 @@ import Logo from "../components/logo.astro";
 ---
 
 <!-- This is an invisible div with relative position so that it takes up the height of the menu (because menu is absolute/fixed) -->
+ <div style="display: inline-block; margin-right: 100em;">
 <div class="relative w-full h-20 opacity-0 pointer-events-none"></div>
 <header id="header" class="absolute top-0 z-50 w-full h-20">
   <div
@@ -47,7 +48,7 @@ import Logo from "../components/logo.astro";
           stroke="currentColor"><path d="M6 18L18 6M6 6l12 12"></path></svg
         >
       </div>
-      <div
+      <!-- <div
         id="menu"
         class="fixed top-[75px] ease-out duration-300 sm:top-0 w-full left-0 sm:py-0 pt-7 pb-4 dm:mx-0 left-0 z-40 flex-col items-end justify-start hidden w-full h-auto text-sm sm:text-base sm:h-auto sm:relative sm:flex-row sm:flex sm:text-sm sm:w-auto sm:pr-0 sm:pt-0"
       >
@@ -71,7 +72,7 @@ import Logo from "../components/logo.astro";
             )
           })
         }
-      </div>
+      </div> -->
       <!-- <div
         id="darkToggle"
         class="relative flex items-center pl-6 ml-4 font-medium tracking-wide cursor-pointer text-neutral-800 group dark:text-white"
@@ -114,7 +115,8 @@ import Logo from "../components/logo.astro";
     </nav>
   </div>
 </header>
-<style>
+</div>
+<!-- <style>
   section{
 	  display: grid;
 	  place-items: center;
@@ -139,8 +141,8 @@ import Logo from "../components/logo.astro";
 		transition: none;
 	}
 } */
-</style>
-<script>
+</style> -->
+<!-- <script>
   const observer = new IntersectionObserver((entries) => {
 	entries.forEach((entry) => {
    if (entry.isIntersecting) {
@@ -154,4 +156,4 @@ import Logo from "../components/logo.astro";
 
   const icons = document.querySelectorAll(".hidden");
   icons.forEach((icon) => observer.observe(icon));
-</script>
+</script> -->

@@ -3,10 +3,11 @@ const { link, text } = Astro.props;
 ---
 
 <a
-  href={link}
+  href="https://mail.google.com/mail/?view=cm&fs=1&to=madian.reyes212006@gmail.com&su=Asunto%20del%20correo&body=Hola,%0A%0AQuisiera aprender más sobre tus proyectos."
+  target="_blank" 
   class="inline-flex w-auto px-4 py-2 mt-5 text-xs font-semibold duration-300 ease-out border rounded-full bg-neutral-900 dark:bg-white dark:text-neutral-900 text-neutral-100 hover:border-neutral-700 border-neutral-900 dark:hover:border-neutral-300 hover:bg-white dark:hover:bg-black dark:hover:text-white hover:text-neutral-900"
-  style="display: inline;"
+  style="display: inline; width: 18.8em;"
   >
   {text}
-  <i style="margin-top: 3%; margin-left: 0.3%;" class="fab fa-github"></i>
+  <i style="margin-top: 3%; margin-left: 0.5em;" class="fas fa-book"></i>
 </a>
