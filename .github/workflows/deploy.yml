@@ -12,7 +12,7 @@ on:
 permissions:
   contents: read
   pages: write
-  id-token: write
+  id-token: write #Hola jesuChrits ojala esto me funcione, amen
 
 jobs:
   build:
