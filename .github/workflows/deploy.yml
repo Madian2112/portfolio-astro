@@ -20,23 +20,11 @@ jobs:
     steps:
       - name: Checkout your repository using git
         uses: actions/checkout@v4
-
-      - name: Install Node.js dependencies
-        run: npm install
-
-      # Compila los estilos de Tailwind CSS
-      - name: Build Tailwind CSS
-        run: npx tailwindcss -i ./src/input.css -o ./dist/output.css --minify
-
-      # Construye el proyecto Astro
-      - name: Build the project
-        run: npm run build
-
-      - name: Upload build folder
+      - name: Install, build, and upload your site
         uses: withastro/action@v3
-        with:
-          path: ./dist
-          package-manager: npm 
+
+      - name: Build Tailwind CSS         
+        run: npx tailwindcss -i ./src/input.css -o ./dist/output.css --minify
         # with:
           # path: . # The root location of your Astro project inside the repository. (optional)
           # node-version: 20 # The specific version of Node that should be used to build your site. Defaults to 20. (optional)
