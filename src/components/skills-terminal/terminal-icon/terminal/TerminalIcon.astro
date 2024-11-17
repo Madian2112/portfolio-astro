@@ -45,7 +45,7 @@ const { name, src, color } = Astro.props;
         </div>
     </div>
 
-    <script defer>
+    <script defer is:inline>
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {
