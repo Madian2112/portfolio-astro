@@ -149,7 +149,7 @@ import Card  from '../../../cards/card.astro'
 		</div>
 	   </div>
 </Terminal>
-<script>
+<script defer is:inline>
 	const observer = new IntersectionObserver((entries) => {
 		entries.forEach((entry) => {
 			if (entry.isIntersecting) {
