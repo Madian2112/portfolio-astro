@@ -12,9 +12,9 @@ import About from "./about.astro"
 
 
 <div class="absolute top-0 z-50 w-full h-20">
-<Layout title="MV">
+<Layout title="MV" >
   <div
-    class="relative z-20 w-full max-w-4xl mx-auto mt-16 px-7 md:mt-24 lg:mt-32 xl:px-0"
+    class="relative z-20 w-full max-w-4xl mx-auto mt-16 px-7 md:mt-24 lg:mt-32 xl:px-0 "
   >
     <div class="flex flex-col items-center md:flex-row">
       <div class="relative w-full md:w-1/2">
@@ -143,9 +143,14 @@ import About from "./about.astro"
       </div>
     </div>
   </div>
-
+<div class="overflow-x-hidden">
   <Separator text="Check out my projects" />
+
   <Projects />
+</div>
+<div class="overflow-x-hidden">
   <Separator text="A little about my" />
   <About />
+
+</div>
 </Layout>
